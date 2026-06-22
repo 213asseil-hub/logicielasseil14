@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion du Stock - Entrée des Produits</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+    <a href="index.html">🛒 Ventes du Jour</a> | 
+    <a href="inventory.html"><b>📦 Gestion du Stock</b></a> |
+    <a href="dashboard.html">📊 Tableau de Bord</a>
+</nav>
+
+    <h1>📦 Ajouter un Nouveau Produit au Stock</h1>
+    
+    <form>
+        <label for="prod-name">Nom du produit :</label>
+        <input type="text" id="prod-name" required placeholder="Ex: Jus de fruits 1L"><br><br>
+
+        <label for="prod-qty">Quantité Initiale :</label>
+        <input type="number" id="prod-qty" min="0" required placeholder="0"><br><br>
+
+        <label for="prod-purchase">Prix d'Achat (DA) :</label>
+        <input type="number" id="prod-purchase" min="0" step="0.01" required placeholder="0.00"><br><br>
+
+        <label for="prod-sell">Prix de Vente (DA) :</label>
+        <input type="number" id="prod-sell" min="0" step="0.01" required placeholder="0.00"><br><br>
+
+        <button type="submit">Ajouter au Stock</button>
+    </form>
+
+    <hr>
+
+    <h2>📊 Produits Disponibles en Stock</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom du Produit</th>
+                <th>Quantité en Stock</th>
+                <th>Prix d'Achat</th>
+                <th>Prix de Vente</th>
+                <th>Marge de Profit (Unitaire)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Coca-Cola 1L</td>
+                <td>24</td>
+                <td>100.00 DA</td>
+                <td>120.00 DA</td>
+                <td>20.00 DA</td>
+            </tr>
+        </tbody>
+    </table>
+<script src="app.js"></script>
+</body>
+</body>
+</htmlلا

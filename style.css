@@ -1,0 +1,153 @@
+/* --- 1. Variables Globales & Reset --- */
+:root {
+    --primary-color: #2c3e50;    /* Bleu foncé pour l'en-tête et les titres */
+    --accent-color: #2980b9;     /* Bleu clair pour les liens actifs */
+    --success-color: #27ae60;    /* Vert pour les boutons d'ajout (Stock) */
+    --danger-color: #e74c3c;     /* Rouge pour les boutons de vente (Soustraction) */
+    --bg-color: #f5f6fa;         /* Couleur de fond gris clair */
+    --text-color: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* --- 2. Barre de Navigation (Navbar) --- */
+nav {
+    background-color: var(--primary-color);
+    padding: 15px 30px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+}
+
+/* --- 3. Structure Principale --- */
+h1, h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 8px;
+    margin-top: 30px;
+}
+
+form {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+/* --- 4. Styling des Formulaires (Inputs & Labels) --- */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Pour que le padding ne dépasse pas de la largeur */
+    transition: border 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+/* --- 5. Boutons --- */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+/* زر صفحة المخزن (أخضر للإضافة) */
+#product-form button, button[type="submit"]:not(.btn-sell) {
+    background-color: var(--success-color);
+}
+
+#product-form button:hover {
+    background-color: #219150;
+}
+
+/* زر صفحة البيع (أحمر للطرح) */
+#sales-form button, button {
+    background-color: var(--danger-color);
+}
+
+#sales-form button:hover {
+    background-color: #c0392b;
+}
+
+/* --- 6. Tableaux (Data Tables) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden; /* لمنع حواف الجدول الحادة */
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px;
+    font-weight: bold;
+    text-align: left;
+}
+
+td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #eeeeee;
+    text-align: left;
+}
+
+tr:nth-of-type(even) {
+    background-color: #f8f9fa; /* لون رمادي خفيف جداً للأسطر الزوجية لتسهيل القراءة */
+}
+
+tr:hover {
+    background-color: #f1f2f6; /* تأثير عند مرور الفأرة فوق السطر */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #dddddd;
+    margin: 40px 0;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Point de Vente - Journalier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+    <a href="index.html">🛒 Ventes du Jour</a> | 
+    <a href="inventory.html"><b>📦 Gestion du Stock</b></a> |
+    <a href="dashboard.html">📊 Tableau de Bord</a>
+</nav>
+
+    <h1>🛒 Enregistrer une Nouvelle Vente</h1>
+    
+    <form>
+        <label for="sale-product">Choisir le produit (Écrire pour chercher) :</label>
+        <input type="text" id="sale-product" list="products-list" required placeholder="Tapez le nom du produit...">
+        
+        <datalist id="products-list">
+            <option value="Coca-Cola 1L">
+            <option value="Jus de fruits 1L">
+            <option value="Café 250g">
+            <option value="Eau Minérale 1.5L">
+            </datalist>
+
+        <br
+        <label for="sale-qty">Quantité Vendue :</label>
+        <input type="number" id="sale-qty" min="1" value="1" required><br><br>
+
+        <button type="submit">Valider la Vente (Soustraction)</button>
+    </form>
+
+    <hr>
+
+    <h2>🧾 Journal des Ventes (Profits Directs)</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Heure</th>
+                <th>Nom du Produit</th>
+                <th>Quantité Vendue</th>
+                <th>Prix de Vente Total</th>
+                <th>Marge de Profit Totale</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>14:30</td>
+                <td>Coca-Cola 1L</td>
+                <td>2</td>
+                <td>240.00 DA</td>
+                <td>40.00 DA</td>
+            </tr>
+        </tbody>
+    </table>
+<script src="app.js"></script>
+</body>
+</body>
+</html>
